@@ -9,10 +9,6 @@ main() {
   });
   log.level = Level.ALL;
   
-  var t = [1, 2, 3, 4, 5, 6, 7];
-  t = t.map((n) => n = n + 1);
-  print(t);
-  
   var lexer = new ExpLexer();
   test('Parse simple expressions', () {
     var tokens = lexer.run('1 + 3 - 2 * 4 - 100');
@@ -27,7 +23,7 @@ main() {
     expect(tokens[8].value, equals(100));
   });
   
-  
+  print("State : " + lexer.getStateByType(StdState).toString());
   
   test('Parse expression with comment inside', () {
     var tokens = lexer.run('1 + 3 /* Wait for it... */ * 0');
