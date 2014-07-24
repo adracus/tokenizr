@@ -23,8 +23,6 @@ main() {
     expect(tokens[8].value, equals(100));
   });
   
-  print("State : " + lexer.getStateByType(StdState).toString());
-  
   test('Parse expression with comment inside', () {
     var tokens = lexer.run('1 + 3 /* Wait for it... */ * 0');
     expect(tokens[0].value, equals(1));

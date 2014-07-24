@@ -1,5 +1,5 @@
 name: tokenizr
-version: 0.0.1
+version: 0.0.1+1
 author: Axel Christ <adracus@gmail.com>
 description: A package to tokenize an input string.
 homepage: http://www.github.com/Adracus/tokenizr

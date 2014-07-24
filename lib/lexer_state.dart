@@ -19,7 +19,6 @@ abstract class LexerState {
       }
     }
     if(maxMatchLength == -1) return doNoMatchHandling(input);
-    print("$maxMatchLength, matches: $tMatches");
     var match = tMatches.firstWhere((t) => t.match.end == maxMatchLength);
     return matchToken(match, input);
   }
